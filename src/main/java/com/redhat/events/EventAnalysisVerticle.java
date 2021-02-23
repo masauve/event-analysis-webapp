@@ -14,7 +14,6 @@ import io.vertx.ext.web.client.WebClientOptions;
 import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.StaticHandler;
 import io.vertx.kafka.client.consumer.KafkaConsumer;
-import io.vertx.KafkaProducer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -238,7 +237,6 @@ public class EventAnalysisVerticle extends AbstractVerticle {
     private void postPayments(RoutingContext routingContext) {
 
 
-        KafkaProducer
         if(null != paymentsHome && !paymentsHome.isEmpty()) {
             routingContext.response().setStatusCode(201).putHeader("content-type", "application/json")
                     .end(Json.encodePrettily(new Gson().toJson(paymentsHome)));
