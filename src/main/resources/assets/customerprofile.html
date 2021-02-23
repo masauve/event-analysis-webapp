@@ -188,11 +188,11 @@ $http({
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2>Customer Profile</h2>
+                        <h2>Station Profile</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Customer Profile</li>
+                                <li class="breadcrumb-item active" aria-current="page">Station Profile</li>
                             </ol>
                         </nav>
                     </div>
@@ -239,18 +239,17 @@ $http({
                         <div class="contact--area contact-page">
 
                             <div class="contact-advisor">
-                                <h5>Possible fraudulent transactions</h5>
+                                <h5>Possible Incidents Count</h5>
 
 
                                 <div style="overflow: auto; min-height: 1px; max-height: 200px;">
                                     <p>
 
-                                    No of ATM Withdrawal attempts in 2 Mins:
                                     <br/>
                                     <table border="1" width="100%">
-                                    <tr><td>UserId</td><td>No of Attempts</td>
+                                    <tr><td>Station</td><td>No of Incidents</td>
                                     <tr ng-repeat="alert in alerts track by $index" >
-                                        <td>{{alert.userId}}</td>
+                                        <td>Berri</td>
                                         <td>{{alert.noOfAttempts}}</td>
 
 
