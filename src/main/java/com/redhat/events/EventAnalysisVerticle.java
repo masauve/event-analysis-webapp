@@ -78,7 +78,7 @@ public class EventAnalysisVerticle extends AbstractVerticle {
 
         consumer.handler(record -> {
 
-            if(record.key().equalsIgnoreCase("\"John\"")) {
+            if(record.key().equalsIgnoreCase("\"Berri\"")) {
 
 
                 Map<String, Object> value = new Gson().fromJson(record.value(),Map.class);
